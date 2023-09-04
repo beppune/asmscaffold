@@ -8,6 +8,8 @@
 ;		ld ld_flags -o base base.o
 ;
 
+global _start
+
 section .data
 
 section .bss
