@@ -8,7 +8,7 @@ M4BIN=$(which m4 2>/dev/null)
 B64BIN=$(which base64 2>/dev/null)
 SEDBIN=$(which sed 2>/dev/null)
 NASM_FLAGS=" -f elf32 -g "
-LD_FLAGS=" -m  elf32-i386 "
+LD_FLAGS=" -m  elf_i386 "
 
 if [[ -z "${M4BIN}" ]]; then
 	echo "m4 macro processor not found"
@@ -149,9 +149,9 @@ output_tag ASM | output_template ASM
 exit
 
 MAKEFILE_BEGIN
-CmJhc2U6CWJhc2UubwoJbGQgbGRfZmxhZ3MgLW8gYmFzZW5hbWUgYmFzZW5hbWUubwoKYmFzZW5h
-bWUubzoJYmFzZS5hc20KCW5hc20gbmFzbV9mbGFncyAtbyBiYXNlLm8gYmFzZS5hc20KCmNsZWFu
-OgoJcm0gYmFzZSBiYXNlLm8KCgo=
+CmJhc2U6CWJhc2UubwoJbGQgbGRfZmxhZ3MgLW8gYmFzZW5hbWUgYmFzZW5hbWUubwoKYmFzZS5v
+OgliYXNlLmFzbQoJbmFzbSBuYXNtX2ZsYWdzIC1vIGJhc2UubyBiYXNlLmFzbQoKY2xlYW46Cgly
+bSBiYXNlIGJhc2UubwoKCg==
 MAKEFILE_END
 
 ASM_BEGIN
