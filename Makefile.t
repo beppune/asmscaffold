@@ -8,4 +8,8 @@ base.o:	base.asm
 clean:
 	rm base base.o
 
+ifneq ($(EDITOR),)
+e:
+	${EDITOR} script_name
+endif
 
