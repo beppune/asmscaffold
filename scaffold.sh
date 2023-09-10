@@ -2,7 +2,6 @@
 #
 # Adapted from https://www.shellscript.sh/examples/getopt/
 #
-set -euo pipefail
 
 M4BIN=$(which m4 2>/dev/null)
 B64BIN=$(which base64 2>/dev/null)
@@ -24,6 +23,8 @@ if [[ -z "${B64BIN}" ]]; then
 	echo "base64 not found"
 	exit 2
 fi
+
+set -euo pipefail
 
 BASE=
 SCRIPT_NAME=
