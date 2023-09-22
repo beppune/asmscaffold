@@ -13,3 +13,5 @@ e:
 	${EDITOR} script_name
 endif
 
+run: base
+    ./base
