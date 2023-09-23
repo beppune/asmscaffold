@@ -43,7 +43,6 @@ Usage: $0
 
    [-a | --asmfile]  Dump asm template
    [-m | --makefile] Dump Makefile template
-   [-c | --cleanup]  Remove project directory if exists before scaffold
 EOF
 exit 1
 }
@@ -93,7 +92,7 @@ output_template() {
 		- > ${PROJECT_DIR}/${TARGET}
 }
 
-args=$(getopt -a -o b:amc --long base:,asmfile,makefile,cleanup -- "$@")
+args=$(getopt -a -o b:am --long base:,asmfile,makefile -- "$@")
 if [[ $? -gt 0 ]]; then
   usage
 fi
